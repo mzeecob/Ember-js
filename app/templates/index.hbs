@@ -1,0 +1,19 @@
+
+<h3>Gists</h3>
+
+<div class="main-code-box">
+          {{#each this.gistsInfo.gists as |gist|}}
+
+    <div class="file-header">
+        <h2>{{gist.filename}}</h2>
+        <small>{{ gist.description }}</small>
+    </div>
+        <pre>
+            <code class="language-HTML">
+              {{gist.body}}
+            </code>
+        </pre>
+
+
+          {{/each}}
+</div>

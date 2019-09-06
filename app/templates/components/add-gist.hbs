@@ -1,0 +1,25 @@
+
+<div class="gist-wrapper">
+    <h2>Create Gist</h2>
+
+    <div class="gist-box">
+        <div class="file-header">
+            <input value={{this.filename}} onchange={{action (mut this.filename) value="target.value"}} type="text"
+                   placeholder="Filename including extension...">
+        </div>
+    </div>
+    <div class="gist-description">
+        <input value={{this.description}} onchange={{action (mut this.description) value="target.value"}} type="gist-description"
+               placeholder="Gist description">
+    </div>
+    <div class="text-area-gist">
+      <textarea name="main-text-gist" id="" cols="30" rows="10" value={{this.body}}
+                onchange={{action (mut this.body) value="target.value"}}></textarea>
+    </div>
+        <div class="gist-button-wrapper">
+            <button onclick={{action @addFile this.filename this.description this.body}} class="gist-button">Add file</button>
+        </div>
+
+
+</div>
+
